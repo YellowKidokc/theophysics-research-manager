@@ -1,0 +1,11 @@
+{
+  "id": "theophysics-research-assistant",
+  "name": "Theophysics Research Assistant",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Semantic markup, math translation, AI-powered research assistance, and PostgreSQL sync for the Theophysics vault system.",
+  "author": "Theophysics Research Team",
+  "authorUrl": "https://github.com/theophysics",
+  "isDesktopOnly": true,
+  "fundingUrl": ""
+}
