@@ -1,37 +1,11 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
+﻿__pycache__/
+*.pyc
+*.pyo
 venv/
-env/
-ENV/
-.venv
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# App specific
+.venv/
 config/settings.ini
 config/research_links.json
-config/research_priority.json
 *.db
-*.sqlite
-
-# Logs
+.idea/
+.vscode/
 *.log
-
-# Build
-build/
-dist/
-*.egg-info/
-

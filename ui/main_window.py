@@ -119,10 +119,20 @@ class MainWindow(QMainWindow):
 
     def _add_tabs(self) -> None:
         """Add all tabs."""
-        # Definitions tab
+        # Paper Scanner tab (NEW - put first for visibility)
+        from .tabs.paper_scanner_tab import PaperScannerTab
+        paper_scanner_tab = PaperScannerTab(self.definitions_manager)
+        self.tab_widget.addTab(paper_scanner_tab, "📄 Paper Scanner")
+        
+        # Definitions Scanner tab (NEW - validate against template)
+        from .tabs.definitions_scanner_tab import DefinitionsScannerTab
+        definitions_scanner_tab = DefinitionsScannerTab(self.definitions_manager)
+        self.tab_widget.addTab(definitions_scanner_tab, "🔍 Definition Scanner")
+        
+        # Definitions tab (original editor)
         from .tabs.definitions_tab import DefinitionsTab
         definitions_tab = DefinitionsTab(self.definitions_manager)
-        self.tab_widget.addTab(definitions_tab, "Definitions")
+        self.tab_widget.addTab(definitions_tab, "📖 Definitions")
 
         # Vault System tab
         from .tabs.vault_system_tab import VaultSystemTab
@@ -157,10 +167,15 @@ class MainWindow(QMainWindow):
         database_tab = DatabaseTab(self.postgres_manager)
         self.tab_widget.addTab(database_tab, "🗄️ Database")
 
+        # Structure Builder tab
+        from .tabs.structure_builder_tab import StructureBuilderTab
+        structure_builder_tab = StructureBuilderTab(self.definitions_manager)
+        self.tab_widget.addTab(structure_builder_tab, "🏗️ Structure Builder")
+        
         # Settings tab
         from .tabs.settings_tab import SettingsTab
         settings_tab = SettingsTab(self.settings, self.definitions_manager)
-        self.tab_widget.addTab(settings_tab, "Settings")
+        self.tab_widget.addTab(settings_tab, "⚙️ Settings")
 
     def _refresh_definitions_tab(self) -> None:
         """Refresh the definitions tab."""
