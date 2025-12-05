@@ -1,28 +1,31 @@
 # GitHub Repository Setup
 
 ## Repository Name
-**theophysics-research-manager**
+**theophysics-vault-manager**
 
 ## Steps to Push to GitHub
 
 1. **Create the repository on GitHub:**
    - Go to GitHub and create a new repository
-   - Name it: `theophysics-research-manager`
+   - Name it: `theophysics-vault-manager`
    - Make it public or private (your choice)
    - **Don't** initialize with README, .gitignore, or license (we already have these)
 
 2. **Add remote and push:**
    ```bash
-   cd "D:\THEOPHYSICS_MASTER\Apps\Obsidian-Definitions-Manager"
+   cd "D:\theophysics-research-manager"
+   
+   # Initialize git
+   git init
    
    # Add all files
    git add .
    
    # Initial commit
-   git commit -m "Initial commit: Theophysics Research Manager v1.0.0"
+   git commit -m "v2.0: Theophysics Vault Manager"
    
    # Add remote (replace YOUR_USERNAME with your GitHub username)
-   git remote add origin https://github.com/YOUR_USERNAME/theophysics-research-manager.git
+   git remote add origin https://github.com/YOUR_USERNAME/theophysics-vault-manager.git
    
    # Push to GitHub
    git branch -M main
@@ -38,7 +41,7 @@
 
 ## Repository Description
 
-**Theophysics Research Manager** - A comprehensive research management system for Obsidian vaults. Features definition management, research linking, footnote generation, and PostgreSQL integration.
+**Theophysics Vault Manager** - A comprehensive research management GUI for Obsidian vaults. Features paper scanning, NLP term detection, definition engine with Wikipedia integration, structure builder, and dashboard generation.
 
 ## Topics/Tags for GitHub
 - obsidian
